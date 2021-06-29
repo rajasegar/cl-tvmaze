@@ -1,3 +1,5 @@
+(push #p"/app/" asdf:*central-registry*)
+
 (ql:quickload :cl-mdb)
 
 (defpackage cl-mdb.app
