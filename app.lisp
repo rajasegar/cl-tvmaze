@@ -1,7 +1,5 @@
 (push #p"/app/" asdf:*central-registry*)
 
-(ql:update-all-dists)
-
 (ql:quickload :cl-mdb)
 
 (defpackage cl-mdb.app
