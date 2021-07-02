@@ -1,0 +1,15 @@
+{% extends "layouts/default.html" %}
+{% block title %}CL-MDB - Movie database in Common Lisp{% endblock %}
+{% block content %}
+<div id="main">
+  <h1>Shows - Common lisp TV  database</h1>
+  <ul class="showlist">
+    {% for show in shows %}
+    <li>
+      <p><a href="/shows/{{show.id}}">{{show.name}}</a></p>
+      <img src={{show.image.medium}} />
+    </li>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}

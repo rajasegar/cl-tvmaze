@@ -1,0 +1,21 @@
+{% extends "layouts/default.html" %}
+{% block title %}Schedule: CL-MDB - TV database in Common Lisp{% endblock %}
+{% block content %}
+<div id="main">
+  <h1>Schedule</h1>
+  <p>Country:
+    <select >
+    </select>
+  </p>
+  <p>Date: <input type="date" /></p>
+  <ul>
+    <li>
+      <p></p>
+      <img src={{show.image.medium}}/>
+      <p>Airtime: {{airtime}}</p>
+      <p>Runtime: {{show.runtime}} minutes</p>
+      <p>Network: {{show.network && show.network.name}}</p>
+    </li>
+  </ul>
+</div>
+{% endblock %}

@@ -12,6 +12,12 @@
                ;; for @route annotation
                "cl-syntax-annot"
 
+	       ;; json
+	       "cl-json"
+
+	       ;; ajax
+	       "drakma"
+
                ;; HTML Template
                "djula"
 

@@ -2,6 +2,8 @@
 
 body {
   font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+  background: papayawhip;
+  color: purple;
 }
 
 a:link {
@@ -18,4 +20,29 @@ a:hover {
 
 #main {
   text-align: center;
+}
+
+nav ul {
+    display:flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    margin: 1em;
+    padding: 1em;
+}
+
+.showlist {
+    display:flex;
+    flex-wrap: wrap;
+}
+.showlist li {
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid black;
+    list-style: none;
+    text-align: center;
 }

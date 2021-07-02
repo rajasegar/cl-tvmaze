@@ -20,11 +20,23 @@
 (defvar *web* (make-instance '<web>))
 (clear-routing-rules *web*)
 
+;; Config drakma
+(push (cons "application" "json") drakma:*text-content-types*)
+(setf drakma:*header-stream* *standard-output*)
+
 ;;
 ;; Routing rules
 
 (defroute "/" ()
   (render #P"index.html"))
+
+(defroute "/shows" ()
+  (let ((shows (cl-json:decode-json-from-string
+		(drakma:http-request "https://api.tvmaze.com/shows"))))
+  (render #P"shows.html" (list :shows shows))))
+
+(defroute "/schedule" ()
+  (render #P"schedule.html"))
 
 ;;
 ;; Error pages
